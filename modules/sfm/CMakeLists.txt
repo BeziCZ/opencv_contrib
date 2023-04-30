@@ -4,7 +4,8 @@ set(the_description "SFM algorithms")
 
 ### LIBMV LIGHT EXTERNAL DEPENDENCIES ###
 
-find_package(Ceres QUIET)
+#find_package(Ceres QUIET)
+find_package(Ceres REQUIRED)
 
 if(NOT Gflags_FOUND)  # Ceres find gflags on the own, so separate search isn't necessary
   find_package(Gflags QUIET)

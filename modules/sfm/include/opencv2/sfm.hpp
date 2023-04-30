@@ -33,6 +33,8 @@
  *
  */
 
+#define CERES_FOUND true
+
 #ifndef __OPENCV_SFM_HPP__
 #define __OPENCV_SFM_HPP__
 
