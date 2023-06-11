@@ -73,7 +73,7 @@ namespace sfm
 */
 CV_EXPORTS_W
 void
-reconstruct(InputArrayOfArrays points2d, OutputArray Ps, OutputArray points3d, InputOutputArray K,
+reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArray points3d, InputOutputArray K,
             bool is_projective = false);
 
 /** @brief Reconstruct 3d points from 2d correspondences while performing autocalibration.
@@ -110,7 +110,7 @@ reconstruct(InputArrayOfArrays points2d, OutputArray Rs, OutputArray Ts, InputOu
 */
 CV_EXPORTS_W
 void
-reconstruct(const std::vector<String> images, OutputArray Ps, OutputArray points3d,
+reconstruct(const std::vector<String> images, OutputArrayOfArrays Ps, OutputArray points3d,
             InputOutputArray K, bool is_projective = false);
 
 /** @brief Reconstruct 3d points from 2d images while performing autocalibration.
