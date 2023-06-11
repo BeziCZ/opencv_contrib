@@ -73,7 +73,7 @@ namespace sfm
 */
 CV_EXPORTS_W
 void
-reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArray points3d, InputOutputArray K,
+reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArrayOfArrays points3d, InputOutputArray K,
             bool is_projective = false);
 
 /** @brief Reconstruct 3d points from 2d correspondences while performing autocalibration.
@@ -93,7 +93,7 @@ reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArray poi
 CV_EXPORTS_W
 void
 reconstruct(InputArrayOfArrays points2d, OutputArray Rs, OutputArray Ts, InputOutputArray K,
-            OutputArray points3d, bool is_projective = false);
+            OutputArrayOfArrays points3d, bool is_projective = false);
 
 /** @brief Reconstruct 3d points from 2d images while performing autocalibration.
   @param images a vector of string with the images paths.
@@ -110,7 +110,7 @@ reconstruct(InputArrayOfArrays points2d, OutputArray Rs, OutputArray Ts, InputOu
 */
 CV_EXPORTS_W
 void
-reconstruct(const std::vector<String> images, OutputArrayOfArrays Ps, OutputArray points3d,
+reconstruct(const std::vector<String> images, OutputArrayOfArrays Ps, OutputArrayOfArrays points3d,
             InputOutputArray K, bool is_projective = false);
 
 /** @brief Reconstruct 3d points from 2d images while performing autocalibration.
@@ -131,7 +131,7 @@ reconstruct(const std::vector<String> images, OutputArrayOfArrays Ps, OutputArra
 CV_EXPORTS_W
 void
 reconstruct(const std::vector<String> images, OutputArray Rs, OutputArray Ts,
-            InputOutputArray K, OutputArray points3d, bool is_projective = false);
+            InputOutputArray K, OutputArrayOfArrays points3d, bool is_projective = false);
 
 #endif /* CV_DOXYGEN || CERES_FOUND */
 
